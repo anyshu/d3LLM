@@ -11,7 +11,7 @@ from d3llm.d3llm_LLaDA.d3llm_llada_generate_util import generate_multi_block_kv_
 from utils.utils_LLaDA.model.modeling_llada import LLaDAModelLM
 
 # Model path
-m = "d3LLM/d3LLM_LLaDA"
+m = "/mnt/data/models/d3LLM/d3LLM_LLaDA"
 
 tokenizer = AutoTokenizer.from_pretrained(m, trust_remote_code=True)
 device = torch.device("cuda:0")

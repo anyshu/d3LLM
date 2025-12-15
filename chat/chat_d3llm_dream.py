@@ -16,7 +16,7 @@ from utils.utils_Dream.model.configuration_dream import DreamConfig
 from d3llm.d3llm_DREAM.d3llm_dream_generate_util import DreamGenerationMixin as D3LLMGenerationMixin
 
 # Model path
-m = "d3LLM/d3LLM_Dream"
+m = "/mnt/data/models/d3LLM/d3LLM_Dream"
 # m = "d3LLM/d3LLM_Dream_Coder"
 
 tokenizer = AutoTokenizer.from_pretrained(m, trust_remote_code=True)
