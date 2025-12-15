@@ -637,14 +637,14 @@ class HFLM(TemplateLM):
 
             if autogptq:
                 try:
-                    from auto_gptq import AutoGPTQForCausalLM
+                    from gptqmodel import GPTQModel
                 except ModuleNotFoundError as exception:
                     raise type(exception)(
                         "Tried to load auto_gptq, but auto-gptq is not installed ",
                         "please install auto-gptq via pip install lm-eval[gptq] or pip install -e .[gptq]",
                     ) from exception
 
-                self._model = AutoGPTQForCausalLM.from_quantized(
+                self._model = GPTQModel.from_quantized(
                     pretrained,
                     trust_remote_code=trust_remote_code,
                     model_basename=None if autogptq is True else Path(autogptq).stem,
