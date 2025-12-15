@@ -1,4 +1,4 @@
-transformers==4.49.0
+transformers
 datasets==3.2.0
 torch
 lm_eval==0.4.9
